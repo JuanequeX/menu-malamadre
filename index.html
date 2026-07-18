@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menú Malamadre × Playas On Tech</title>
+  <meta name="description" content="Menú Malamadre Plantas y Café × Playas On Tech — Paninis, ensaladas, pastas, burritos, bebidas y postres.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --yellow: #FFD93B;
+      --black: #0d0d0d;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: var(--yellow);
+      color: var(--black);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      min-height: 100vh;
+      padding: 2rem 1.5rem 3rem;
+    }
+
+    .menu {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1.1fr 1fr;
+      gap: 1.5rem;
+      align-items: start;
+    }
+
+    .col {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    /* ---------- Cards ---------- */
+    .card {
+      border: 4px solid var(--black);
+      border-radius: 28px;
+      padding: 1.5rem 1.4rem;
+    }
+
+    .card--black {
+      background: var(--black);
+      color: var(--yellow);
+      border-radius: 28px;
+      padding: 1.5rem 1.4rem;
+    }
+
+    /* ---------- Typography ---------- */
+    .graffiti {
+      font-family: 'Permanent Marker', cursive;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      line-height: 1.05;
+    }
+
+    .card h2 {
+      font-family: 'Permanent Marker', cursive;
+      text-transform: uppercase;
+      font-size: clamp(1.7rem, 2.6vw, 2.3rem);
+      text-align: center;
+      margin-bottom: 1rem;
+      letter-spacing: 2px;
+    }
+
+    .item { margin-bottom: 1.1rem; font-size: 0.85rem; line-height: 1.45; }
+    .item:last-child { margin-bottom: 0; }
+    .item strong { text-transform: uppercase; }
+    .item p { text-transform: uppercase; }
+
+    /* ---------- Header (center column) ---------- */
+    .brand {
+      text-align: center;
+      padding-top: 0.5rem;
+    }
+
+    .brand h1 {
+      font-family: 'Permanent Marker', cursive;
+      font-size: clamp(3rem, 6vw, 4.5rem);
+      line-height: 0.95;
+      letter-spacing: 3px;
+    }
+
+    .brand .sub {
+      font-family: 'Permanent Marker', cursive;
+      font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+      letter-spacing: 4px;
+      margin-top: 0.1rem;
+    }
+
+    .brand .tagline {
+      font-size: 0.75rem;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      margin-top: 0.35rem;
+      font-weight: 800;
+    }
+
+    .brand .x {
+      font-family: 'Permanent Marker', cursive;
+      font-size: 2rem;
+      margin: 0.6rem 0 0.5rem;
+    }
+
+    .pill {
+      display: inline-block;
+      background: var(--black);
+      color: var(--yellow);
+      font-family: 'Permanent Marker', cursive;
+      font-size: clamp(1.3rem, 2.2vw, 1.8rem);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      padding: 0.5rem 1.6rem;
+      border-radius: 999px;
+    }
+
+    /* ---------- Bebidas list ---------- */
+    .card--black ul {
+      list-style: none;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .card--black ul li { margin-bottom: 0.55rem; }
+    .card--black ul li:last-child { margin-bottom: 0; }
+
+    /* ---------- Coctel block ---------- */
+    .coctel {
+      text-align: center;
+      padding: 2.2rem 1.4rem;
+    }
+
+    .coctel .graffiti {
+      font-size: clamp(2rem, 3.2vw, 2.8rem);
+      letter-spacing: 2px;
+    }
+
+    /* ---------- Postres (no box) ---------- */
+    .postres { padding: 0 0.5rem; }
+
+    .postres h2 {
+      font-family: 'Permanent Marker', cursive;
+      text-transform: uppercase;
+      font-size: clamp(1.9rem, 3vw, 2.5rem);
+      text-align: center;
+      letter-spacing: 3px;
+      margin-bottom: 0.9rem;
+    }
+
+    /* ---------- Responsive ---------- */
+    @media (max-width: 900px) {
+      .menu { grid-template-columns: 1fr; }
+      .col--center { order: -1; }
+    }
+  </style>
+</head>
+<body>
+  <main class="menu">
+
+    <!-- Columna izquierda -->
+    <div class="col">
+      <section class="card">
+        <h2>Paninis</h2>
+        <div class="item">
+          <p><strong>Pollo Tocino:</strong> pollo plancha, tocino, queso manchego, acompañado de ensalada de la casa</p>
+        </div>
+        <div class="item">
+          <p><strong>Selva Negra:</strong> jamón selva negra, aguacate, tomate cherry, queso manchego, acompañado de ensalada de la casa</p>
+        </div>
+        <div class="item">
+          <p><strong>Jamón Serrano:</strong> base queso crema, jamón serrano, tomate cherry y queso manchego, acompañado de ensalada de la casa</p>
+        </div>
+        <div class="item">
+          <p><strong>Panini Alejandro:</strong> jamón serrano, selva negra, tocino, pollo plancha, manchego, aguacate y pesto, acompañado de nuestra ensalada de la casa</p>
+        </div>
+      </section>
+
+      <section class="card--black coctel">
+        <div class="graffiti">Coctel de<br>Bienvenida</div>
+      </section>
+    </div>
+
+    <!-- Columna central -->
+    <div class="col col--center">
+      <header class="brand">
+        <h1>Menú</h1>
+        <div class="sub">Malamadre</div>
+        <div class="tagline">Plantas y Café</div>
+        <div class="x">×</div>
+        <div class="pill">Playas On Tech</div>
+      </header>
+
+      <section class="card">
+        <h2>Ensalada<br>y Pasta</h2>
+        <div class="item">
+          <p><strong>Con Madre:</strong><br>mix de lechuga, pollo plancha, elote, aguacate, huevo cocido, pasta y cherrys.</p>
+        </div>
+        <div class="item">
+          <p><strong>Panelita Asada:</strong><br>mix de lechuga, panelita asada, queso de cabra, aguacate, huevo cocido, pepitas de calabaza.</p>
+        </div>
+        <div class="item">
+          <p><strong>Pasta 3 Quesos:</strong><br>fusilli, crema de 3 quesos, jamón serrano, champiñones, germinado, cherrys, parmesano y pan tostado</p>
+        </div>
+      </section>
+    </div>
+
+    <!-- Columna derecha -->
+    <div class="col">
+      <section class="card--black">
+        <h2 class="graffiti">Bebidas</h2>
+        <ul>
+          <li>Agua fresca</li>
+          <li>Limonada</li>
+          <li>Naranjada</li>
+          <li>Limonada de frutos rojos</li>
+          <li>Azalea</li>
+          <li>Agua Félix</li>
+          <li>Jugos</li>
+          <li>Late frío</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Burritos</h2>
+        <div class="item">
+          <p><strong>Bañado:</strong><br>tortilla de harina, frijol, queso manchego, guiso de camarón con pimientos, bañado en cremoso de salsa verde.</p>
+        </div>
+        <div class="item">
+          <p><strong>Chipotle:</strong><br>tortilla de harina, frijol, queso manchego, guiso de camarón con longaniza y cebolla, bañado en salsa cremosa de chipotle.</p>
+        </div>
+      </section>
+
+      <section class="postres">
+        <h2>Postres</h2>
+        <div class="item">
+          <p><strong>French Toast:</strong><br>rebanada de pan francés, con frutos rojos del bosque, crumble de nuez y mantequilla</p>
+        </div>
+      </section>
+    </div>
+
+  </main>
+</body>
+</html>
